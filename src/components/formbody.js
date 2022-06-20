@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./formbody.css";
+import Personal from "./personal";
 const FormBody = () => {
   const [i, setI] = useState(0);
   const increment = () => {
@@ -13,17 +14,20 @@ const FormBody = () => {
     }
   };
   return (
-    <div className="formbody">
-      <h1>{i}</h1>
-      {i > 0 && (
-        <button onClick={decrement} className="decrement">
-          Back
+    <form className="formbody">
+      <Personal />
+      <div className="buttonbody">
+        <h1>{i}</h1>
+        {i > 0 && (
+          <button type="submit" onClick={decrement} className="decrement">
+            Back
+          </button>
+        )}
+        <button type="submit" onClick={increment} className="increment">
+          Next
         </button>
-      )}
-      <button onClick={increment} className="increment">
-        Next
-      </button>
-    </div>
+      </div>
+    </form>
   );
 };
 export default FormBody;

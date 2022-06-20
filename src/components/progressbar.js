@@ -3,7 +3,7 @@ import personal from "./images/personal.png";
 import academic from "./images/resume.png";
 import additional from "./images/additional.png";
 import preview from "./images/preview.png";
-const i = 0;
+const i = 3;
 const Progress = () => {
   return (
     <div className="body">
