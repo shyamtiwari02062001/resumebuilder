@@ -1,0 +1,42 @@
+.body{
+    margin: auto;
+    max-height: 80px;
+    min-height: 20px;
+    padding: 10px;
+    width: 80%;
+    background-color: whitesmoke;
+    box-shadow:  0 4px 8px 0 rgba(0,0,0,0.2);
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    justify-content: space-around;
+}
+.image{
+    padding: 5px;
+    max-height: 60px;
+    max-width: 60px;
+   min-height: 20px;
+   min-width: 20px;
+    color: black
+}
+.changeImage{
+    padding: 5px;
+    max-height: 60px;
+    max-width: 60px;
+   min-height: 20px;
+   min-width: 20px;
+    filter: invert(20%) sepia(100%) saturate(3570%) hue-rotate(105deg) brightness(96%) contrast(107%);
+}
+.line{
+    width: 30%;
+    height: 5px;
+    background-color: black;
+    border-radius: 5px;
+}
+
+.changeLine{
+    width: 30%;
+    height: 5px;
+    background-color: #008000;
+    border-radius: 5px;
+}
