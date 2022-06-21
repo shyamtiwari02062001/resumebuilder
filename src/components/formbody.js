@@ -1,29 +1,56 @@
-import React, { useState } from "react";
+import React, { useContext } from "react";
+import ResumeDetailsContext from "../indexContext";
 import "./formbody.css";
 import Personal from "./personal";
 const FormBody = () => {
-  const [i, setI] = useState(0);
-  const increment = () => {
-    if (i < 4) {
-      setI(i + 1);
+  const {
+    id,
+    setId,
+    firstName,
+    lastName,
+    mobileNumber,
+    email,
+    dob,
+    interest,
+    address,
+    languages,
+  } = useContext(ResumeDetailsContext);
+  let count = 0;
+  const increment = (event) => {
+    if (
+      firstName !== "" &&
+      lastName !== "" &&
+      mobileNumber !== "" &&
+      email !== "" &&
+      dob !== "" &&
+      interest !== "" &&
+      address !== "" &&
+      languages !== ""
+    ) {
+      count = 0;
+    } else {
+      count = 1;
+    }
+    if (id < 4 && count === 0) {
+      event.preventDefault();
+      setId(id + 1);
     }
   };
   const decrement = () => {
-    if (i > 0) {
-      setI(i - 1);
+    if (id > 0) {
+      setId(id - 1);
     }
   };
   return (
     <form className="formbody">
-      <Personal />
+      {id === 0 && <Personal />}
       <div className="buttonbody">
-        <h1>{i}</h1>
-        {i > 0 && (
-          <button type="submit" onClick={decrement} className="decrement">
+        {id > 0 && (
+          <button onClick={decrement} className="decrement">
             Back
           </button>
         )}
-        <button type="submit" onClick={increment} className="increment">
+        <button type={"submit"} onClick={increment} className="increment">
           Next
         </button>
       </div>

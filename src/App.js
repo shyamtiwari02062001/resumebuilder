@@ -1,14 +1,17 @@
 import "./App.css";
 import FormBody from "./components/formbody";
 import Progress from "./components/progressbar";
+import { ResumeDetailsProvider } from "./indexContext";
 const App = () => {
   return (
-    <div className="App">
+    <ResumeDetailsProvider>
+      <div className="App">
       <Progress />
       <br />
       <br />
       <FormBody />
     </div>
+    </ResumeDetailsProvider>
   );
 };
 

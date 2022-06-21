@@ -3,16 +3,19 @@ import personal from "./images/personal.png";
 import academic from "./images/resume.png";
 import additional from "./images/additional.png";
 import preview from "./images/preview.png";
-const i = 3;
+import { useContext } from "react";
+import ResumeDetailsContext from "../indexContext";
 const Progress = () => {
+const {id} =useContext(ResumeDetailsContext);
+
   return (
     <div className="body">
-      {i >= 0 ? (
+      {id >= 0 ? (
         <img src={personal} alt="" className="changeImage" />
       ) : (
         <img src={personal} alt="" className="image" />
       )}
-      {i >= 1 ? (
+      {id >= 1 ? (
         <>
           <div className="changeLine" />
           <img src={academic} alt="" className="changeImage" />
@@ -23,7 +26,7 @@ const Progress = () => {
           <img src={academic} alt="" className="image" />
         </>
       )}
-      {i >= 2 ? (
+      {id >= 2 ? (
         <>
           {" "}
           <div className="changeLine" />
@@ -36,7 +39,7 @@ const Progress = () => {
           <img src={additional} alt="" className="image" />
         </>
       )}
-      {i >= 3 ? (
+      {id >= 3 ? (
         <>
           <div className="changeLine" />
           <img src={preview} alt="" className="changeImage" />

@@ -60,7 +60,13 @@
 .label {
     font-size: larger;
 }
-
+.labelUnrequired{
+    font-size: larger;
+}
+.label:after{
+    content:" *";
+    color: red;
+}
 .header {
     text-align: center;
 }
