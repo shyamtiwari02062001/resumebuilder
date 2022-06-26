@@ -1,4 +1,18 @@
-const Print=()=>{
-    return <h1>jdj</h1>
-}
+import React, { useRef } from 'react';
+import { useReactToPrint } from 'react-to-print';
+
+import { ComponentToPrint } from './Page.js'
+const Print = () => {
+  const componentRef = useRef();
+  const handlePrint = useReactToPrint({
+    content: () => componentRef.current,
+  });
+
+  return (
+    <div>
+      <ComponentToPrint ref={componentRef} />
+      <button onClick={(event)=>{event.preventDefault();handlePrint()}}>Print this out!</button>
+    </div>
+  );
+};
 export default Print;
