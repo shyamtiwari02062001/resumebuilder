@@ -1,4 +1,4 @@
-import "./progressbar.css";
+import "../css/progressbar.css";
 import personal from "./images/personal.png";
 import academic from "./images/resume.png";
 import additional from "./images/additional.png";

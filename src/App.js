@@ -1,4 +1,4 @@
-import "./App.css";
+import "./css/App.css";
 import FormBody from "./components/formbody";
 import Progress from "./components/progressbar";
 import { ResumeDetailsProvider } from "./indexContext";
