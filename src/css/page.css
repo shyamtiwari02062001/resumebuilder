@@ -1,0 +1,22 @@
+table {
+    width: 100%;
+	border-collapse: collapse;
+    font-family: Tahoma, Geneva, sans-serif;
+}
+table td {
+	padding: 15px;
+}
+table thead td {
+	background-color: #D3D3D3;
+	color: black;
+	font-weight: bold;
+	font-size: 13px;
+	border: 1px solid black;
+}
+table tbody td {
+	color: #636363;
+	border: 1px solid black;
+}
+table tbody tr {
+	background-color: #f9fafb;
+}

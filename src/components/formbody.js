@@ -100,9 +100,9 @@ const FormBody = () => {
             Back
           </button>
         )}
-        <button type={"submit"} onClick={increment} className="increment">
+       {id<3&& <button type={"submit"} onClick={increment} className="increment">
           Next
-        </button>
+        </button>}
       </div>
     </form>
   );
